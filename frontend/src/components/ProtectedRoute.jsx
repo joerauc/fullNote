@@ -36,7 +36,7 @@ function ProtectedRoute({ children }) {
             setIsAuthorized(false);
             return;
         }
-        const decoded = jwtDecode(token); // Decodes token, which has exp and value
+        const decoded = jwtDecode(token); // Decodes token, which has expiration and value
         const tokenExpiration = decoded.exp;
         const now = Date.now() / 1000; // Gets date in seconds
 
